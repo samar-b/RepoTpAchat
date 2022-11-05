@@ -4,12 +4,11 @@ pipeline {
 
 
     stages {
-        stage ('GIT') {
+        stage ('Git') {
             steps {
                echo "Getting Project from Git"; 
-                git branch: "master", 
-                    url: "https://github.com/oussamahosni/RepoTpAchat.git";
-            }
+              git(url: 'https://github.com/oussamahosni/RepoTpAchat.git', branch: 'master', credentialsId: 'tpachat')
+           }
         }
        
         stage("Build") {
