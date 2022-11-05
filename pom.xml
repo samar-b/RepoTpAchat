@@ -13,10 +13,11 @@
 	<version>1.0</version>
 	<name>tpAchatProject</name>
 	<description>tpAchatProject</description>
-	<distributionManagement>
+	
+   <distributionManagement>
       <repository>
           <id>deploymentRepo</id>
-          <url>http://host.docker.internal:8081/repository/maven-releases/</url>
+          <url>http://http://192.168.33.10:8081//repository/maven-releases/</url>
       </repository>
     </distributionManagement>
 	<properties>
