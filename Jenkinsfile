@@ -7,8 +7,8 @@ pipeline {
         stage ('GIT') {
             steps {
                echo "Getting Project from Git"; 
-                git branch: "main", 
-                    url: "https://github.com/......";
+                git branch: "master", 
+                    url: "https://github.com/oussamahosni/RepoTpAchat.git";
             }
         }
        
