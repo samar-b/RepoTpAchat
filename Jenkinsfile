@@ -7,9 +7,7 @@ pipeline {
         stage ('Git') {
             steps {
                echo "Getting Project from Git"; 
-               git branch: 'master',
-	       credentialsId: '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'
-               url : 'https://github.com/oussamahosni/RepoTpAchat';
+               git(url: 'https://github.com/oussamahosni/RepoTpAchat', branch: 'master', credentialsId: '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')
            }
         }
        
