@@ -19,17 +19,12 @@ pipeline {
             }
         }
 
-	stage("Sonar") {
+	stage("Sonar Analysis Testing") {
             steps {
                 sh "mvn sonar:sonar -Dsonar.login=admin -Dsonar.password=root"
             }
         }
         
-        stage("SRC Analysis Testing") {
-            steps {
-                sh "mvn sonar:sonar"
-            }
-        }
         
         stage("Build Docker image") {
             steps {
@@ -39,13 +34,14 @@ pipeline {
 
         stage("Deploy Artifact to private registry") {
             steps {
-                sh "..............."
+                sh "docker login -u oussamahosni -p docker123"
+		
             }
         }
 
         stage("Deploy Dokcer Image to private registry") {
             steps {
-                sh "..............."
+                sh "docker push oussamahosni/projetdevops-backend"
             }
         }
       
