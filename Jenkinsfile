@@ -8,6 +8,7 @@ pipeline {
             steps {
                echo "Getting Project from Git"; 
                git branch: 'master',
+	       credentialsId: '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'
                url : 'https://github.com/oussamahosni/RepoTpAchat';
            }
         }
@@ -22,8 +23,7 @@ pipeline {
 
 	stage("Sonar") {
             steps {
-                sh "mvn sonar:sonar -Dsonar.login=admin -Dsonar.password=roo
-t"
+                sh "mvn sonar:sonar -Dsonar.login=admin -Dsonar.password=root"
             }
         }
         
