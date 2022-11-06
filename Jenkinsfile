@@ -22,7 +22,8 @@ pipeline {
 
 	stage("Sonar") {
             steps {
-                sh "mvn sonar:sonar -Dsonar.login=admin -Dsonar.password=root"
+                sh "mvn sonar:sonar -Dsonar.login=admin -Dsonar.password=roo
+t"
             }
         }
         
@@ -34,7 +35,7 @@ pipeline {
         
         stage("Build Docker image") {
             steps {
-                sh "..............."
+                sh "docker build -t oussamahosni/projetdevops-backend . "
             }
         }
 
